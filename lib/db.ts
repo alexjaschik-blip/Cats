@@ -1,0 +1,63 @@
+import Database from 'better-sqlite3';
+import path from 'path';
+
+// On Railway: set DB_PATH=/data/cats.db (persistent volume mounted at /data)
+const DB_PATH = process.env.DB_PATH || path.join(process.cwd(), 'cats.db');
+
+let _db: Database.Database | null = null;
+
+export function getDb(): Database.Database {
+  if (!_db) {
+    _db = new Database(DB_PATH);
+    _db.pragma('journal_mode = WAL');
+    initSchema(_db);
+  }
+  return _db;
+}
+
+function initSchema(db: Database.Database) {
+  db.exec(`
+    CREATE TABLE IF NOT EXISTS cats (
+      id           INTEGER PRIMARY KEY AUTOINCREMENT,
+      image        TEXT NOT NULL,
+      name         TEXT NOT NULL,
+      neighborhood TEXT NOT NULL,
+      quote        TEXT NOT NULL,
+      uploaded_by  TEXT DEFAULT NULL,
+      approved     INTEGER DEFAULT 1,
+      created_at   TEXT DEFAULT (datetime('now'))
+    );
+
+    -- Track which pool entries are already in use so nothing repeats.
+    CREATE TABLE IF NOT EXISTS used_names (
+      name TEXT PRIMARY KEY
+    );
+    CREATE TABLE IF NOT EXISTS used_quotes (
+      quote TEXT PRIMARY KEY
+    );
+  `);
+}
+
+/** Mark a name and quote as consumed. Call inside the same transaction as INSERT INTO cats. */
+export function markUsed(db: Database.Database, name: string, quote: string) {
+  db.prepare('INSERT OR IGNORE INTO used_names  (name)  VALUES (?)').run(name);
+  db.prepare('INSERT OR IGNORE INTO used_quotes (quote) VALUES (?)').run(quote);
+}
+
+/** Return the set of already-used names and quotes. */
+export function getUsed(db: Database.Database): { names: Set<string>; quotes: Set<string> } {
+  const names  = new Set((db.prepare('SELECT name  FROM used_names').all()  as { name:  string }[]).map(r => r.name));
+  const quotes = new Set((db.prepare('SELECT quote FROM used_quotes').all() as { quote: string }[]).map(r => r.quote));
+  return { names, quotes };
+}
+
+export type Cat = {
+  id: number;
+  image: string;
+  name: string;
+  neighborhood: string;
+  quote: string;
+  uploaded_by: string | null;
+  approved: number;
+  created_at: string;
+};

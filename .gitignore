@@ -39,3 +39,15 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# SQLite DB (lives on Railway volume in production)
+cats.db
+
+# Dev scripts
+lib/seed.ts
+lib/migrate-mark-used.ts
+
+# Claude launch config
+.claude/
+cats.db-shm
+cats.db-wal

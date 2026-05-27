@@ -1,0 +1,290 @@
+// ─── CAT NAMES POOL ───────────────────────────────────────────────────────────
+// Compiled from: Greek mythology, Greek street-cat tradition, international
+// cat culture, puns, food, philosophy, history — all public domain / original.
+
+export const NAME_POOL: string[] = [
+  // Greek Mythology
+  "Zeus Pawmaster", "Athena Whiskerwise", "Apollo the Napper", "Artemis Moonpaw",
+  "Hermes Quicktail", "Poseidon Saltwhisker", "Dionysus Dreamfur", "Demeter Purrfield",
+  "Hephaestus Clawhammer", "Ares of the Alley", "Aphrodite Softpaw", "Hera Queenpaw",
+  "Persephone Shadowpaw", "Cassandra Truthclaw", "Odysseus Wandertail",
+  "Achilles Swiftpaw", "Ajax the Enormous", "Penelope of the Windowsill",
+  "Circe Spellwhisker", "Calypso of Glyfada", "Medusa Stonegaze",
+  "Prometheus Firethief", "Icarus Rooftopjumper", "Theseus of the Labyrinth",
+  "Narcissus the Mirror Cat", "Orpheus Meowsician", "Eurydice Shadowfur",
+  "Midas Goldenpaw", "Sisyphus the Tumbler", "Tantalus of the Food Bowl",
+  "Pan the Feral", "Eros Kittendarrow", "Psyche Softgaze", "Tyche Luckytail",
+  "Nemesis the Justified", "Nike Alleyrunner", "Hecate Nightwalker",
+  "Selene Moongazer", "Helios Sungoldpaw", "Morpheus Napmaster",
+
+  // Greek Philosophy
+  "Socrates Pawdrinker", "Plato of the Cave", "Aristotle the Observer",
+  "Epicurus Pleasurepaw", "Diogenes in a Box", "Pythagoras Triangleears",
+  "Heraclitus the River Cat", "Parmenides the Still", "Zeno of the Slow Chase",
+  "Empedocles Fourelement", "Democritus Atomcat", "Thales of Miletus",
+  "Anaximander the Infinite", "Xenophanes the Skeptic", "Protagoras Measurecat",
+  "Gorgias of Persuasion", "Antisthenes the Simple", "Chrysippus Logicpaw",
+  "Plotinus the Mystic", "Porphyry the Vegetarian",
+
+  // Greek History
+  "Pericles Goldenpaw", "Themistocles Nauticat", "Demosthenes Loudmeow",
+  "Leonidas the Brave", "Alcibiades the Handsome", "Pausanias the Traveller",
+  "Cleopatra of Kolonaki", "Alexander Greatpaw", "Philip the Macedonian",
+  "Solon the Lawgiver", "Cleisthenes the Democratic", "Miltiades of Marathon",
+  "Cimon Silverfur", "Epaminondas the Tactician", "Lysander Conquerpaw",
+
+  // Athens Neighborhoods
+  "The Exarcheian", "Monastirakis", "Kolonaki Blue", "Psiri of the Night",
+  "Gazi Glowpaw", "Pangratios", "Kypseli Jumper", "Petralona Sphinx",
+  "Thisio Overlord", "Koukaki Softpaw", "Keramikos Ghost", "Neos Kosmospaw",
+  "Piraeus Sailor", "Glyfada Beach", "Kifisia Garden", "Kesariani Wind",
+  "Vyronas Shadow", "Zografou Scholar", "Nea Smyrni Memory",
+
+  // Greek Food
+  "Mr. Fluffins", "Baklava", "Tzatziki", "Souvlaki", "Loukoumas", "Retsina",
+  "Feta the Proud", "Gyros", "Pita", "Metaxa", "Ouzo", "Halva", "Bougatsa",
+  "Spanakopita", "Tiropita", "Moussaka", "Pastitsio", "Stifado", "Gemista",
+  "Kolokythaki", "Fasolada", "Revithia", "Taramosalata", "Skordalia",
+  "Melomakarona", "Diples", "Saragli", "Kadaifi", "Kokoretsi", "Kleftiko",
+  "Saganaki", "Melitzana", "Horiatiki", "Galakto", "Loukoum", "Magiritsa",
+  "Kontosouvli", "Briami", "Sikomaida", "Xerotigano", "Rahat the Sweet",
+  "Kataifi", "Rizogalo", "Vasilopita", "Tsoureki", "Koulouri", "Paximadi",
+
+  // Famous Cats History
+  "Félicette Spacepaw", "Stubbs the Mayor", "Dewey Readmore Books",
+  "Tom Kitten", "Cheshire Grin", "Dick Whittington's Cat", "Pangur Bán",
+  "Mourka the Dancer", "Unsinkable Sam", "Bob the Street Cat",
+  "Larry of Downing Street", "Palmerston the Diplomat",
+  "Catarina of Poe's House", "Hamlet of the Algonquin",
+  "Blackie the Millionaire", "Socks of the White House",
+
+  // Puns and Wordplay
+  "Claw-dius", "Meowtavius", "Purr-sephone", "Cleo-cat-ra", "Furr-dinand",
+  "Whisker-do", "Pawcasso", "Furrancesco", "Mew-ses", "Scratch-illes",
+  "Hairy Pawter", "Catrick Swayze", "Leonardo Di-cat-rio", "Cat Damon",
+  "Meow-colm X", "Furminator", "Catsanova", "Purrlock Holmes", "Dr. Pawson",
+  "Catpernicus", "Michelangelo Paw", "Botticelli Fur", "Titicat",
+  "Paw-crates", "Fur-guson", "Catter the Great", "Jean-Paw Sartre",
+  "Albert Ein-fur", "Meowthoven", "Johann Sebastian Paw", "Fur-redi Chopin",
+  "Immanuel Claw", "Friedrich Nietzsch-cat", "Karl Marks", "Sigmund Freud-cat",
+
+  // Greek Saints & Byzantine
+  "Saint Nikolaos of Plaka", "Agia Katerina Paw", "Basil the Great Fur",
+  "Chrysostom Goldentongue", "Theophilos the Painter", "Digenes Akrites",
+  "Constantine Porphyrogennetos", "Nikephoros Phokasclaw", "Basil Bulgaroktonocat",
+
+  // Simple Greek Names
+  "Nikos", "Giorgos", "Kostas", "Dimitris", "Panagiotis", "Christos",
+  "Stavros", "Michalis", "Thanasis", "Spyros", "Vangelis", "Takis",
+  "Vasilis", "Petros", "Alexis", "Makis", "Lefteris", "Antonis",
+  "Maria", "Eleni", "Katerina", "Sofia", "Anna", "Georgia",
+  "Despina", "Fotini", "Ioanna", "Chrysa", "Marika", "Vaso",
+
+  // Titles and Epithets
+  "The Magnificent", "The Unknowable", "Lord of the Roof",
+  "The Last Ottoman", "The Byzantine", "The Venetian",
+  "Duchess of Piraeus", "Countess of Exarcheia", "Baron of Psiri",
+  "The Athenian", "The Argonaut", "The Peripatetic",
+  "Professor Paws", "Dr. Hairball", "Captain Midnight",
+  "Commander Fluffington", "Admiral Whiskers", "General Fur",
+  "The Cardinal", "The Deacon", "The Archon",
+  "Don Souvlakis", "Don Feta", "The Godfather of Monastiraki",
+
+  // Odd and Whimsical
+  "Baba", "Dorito", "Yiayia", "Barba-Yiannis", "Kyria Eleftheria",
+  "Uncle Moustache", "The Stranger", "Nobody", "Somebody",
+  "The One Who Knows", "The One Who Waits", "The Inevitable",
+  "Apocalypse", "Renaissance", "Intermission", "Footnote",
+  "Ellipsis", "Semicolon", "The Em Dash", "Parenthesis",
+  "Monday", "Friday the Black", "August Cat", "Solstice",
+  "Equinox", "Perihelion", "Aphelion", "Zenith", "Nadir",
+  "Leftovers", "Overtime", "Encore", "Prelude",
+];
+
+// ─── QUOTES POOL ──────────────────────────────────────────────────────────────
+// Cat wisdom, adapted Greek philosophy, cat-perspective aphorisms.
+// All written as if spoken by a cat.
+
+export const QUOTE_POOL: string[] = [
+  // On Existence
+  "I think, therefore I nap.",
+  "To be, or to nap — it was never a question.",
+  "I do not exist for your amusement. Your amusement exists for me.",
+  "Cogito ergo sum asleep on the warm marble.",
+  "The unexamined nap is not worth sleeping.",
+  "All I know is that I know where the food bowl is.",
+  "I am the measure of all things. Especially the bed.",
+  "Being is what I do between meals.",
+  "Existence precedes breakfast.",
+  "I have made my peace with the void. The void is warm. I approve.",
+  "What is real? The sunbeam. Everything else is speculation.",
+  "I have looked into the abyss. It looked back. I blinked first. This was mercy.",
+  "Form is emptiness, emptiness is form. The food bowl confirms this daily.",
+  "I contain multitudes. Most of them are asleep.",
+  "I am not a cat who thinks. I am thought, wearing fur.",
+
+  // On Time
+  "Time is an illusion. Naptime doubly so.",
+  "The present moment is the only moment. I have verified this from the couch.",
+  "Yesterday I slept. Today I sleep. Tomorrow holds promise.",
+  "The past is gone. The future is uncertain. But the sunny spot at 3pm — that is eternal.",
+  "I have been on this doorstep since before memory. I will be here after.",
+  "Hours mean nothing to me. Only the angle of the sun.",
+  "I have no concept of Monday. This is my greatest achievement.",
+  "Seasons change. My spot in the sun does not.",
+  "I have watched this city for twenty years. Nothing surprises me. Some things still delight me.",
+  "Patience is not a virtue. It is a hunting strategy.",
+
+  // On People
+  "They think they own me. I find this charming.",
+  "I allow them to pet me. This is how I show mercy.",
+  "Humans are serviceable. Warm in winter. Entertaining in summer.",
+  "They built this city. I inherited it.",
+  "Every human is a potential staff member. Some need more training.",
+  "I do not require love. I require adequate portion sizes.",
+  "They call me stray. I call myself free.",
+  "The tourists photograph me. I have not signed a release form. I do not need to.",
+  "They say I am independent. I prefer: sovereign.",
+  "No one owns the street. But I manage it.",
+
+  // On Athens
+  "I have seen the Acropolis at every hour. Dusk remains superior.",
+  "The Parthenon is impressive. My doorstep has better light.",
+  "Athens has always belonged to the cats. Athena simply agreed.",
+  "Plaka in the morning, Exarcheia at night. A cat must diversify.",
+  "The marble was warm before the tourists arrived. It will be warm after.",
+  "I have walked every alley in this city. Some twice. None disappointed.",
+  "Athens smells of oregano and salt and something older than both.",
+  "The graffiti is new. The walls are old. I was here for both.",
+  "This city breathes. I breathe with it. We are old friends.",
+  "Beneath every Athenian street is another Athenian street. I know both.",
+  "The Saronic Gulf at sunset is the most beautiful thing in the world. I have confirmed this by sleeping through it.",
+  "Every neighborhood in Athens has its own light. Kolonaki gold. Exarcheia grey. Plaka amber. I have tested all of them as nap locations.",
+  "The agora was once full of philosophers. Now it is full of tourists. The philosophical climate has improved.",
+  "They moved the capital from Nauplion to Athens. I was against it. Too many pigeons.",
+
+  // On Food
+  "A meal is a sacred thing. Rush it and you dishonor us both.",
+  "I have eaten sardines on this dock since before you were born.",
+  "The best food is the food from someone else's plate.",
+  "Dry biscuits are an act of aggression. I have filed a complaint with the universe.",
+  "Fresh fish is not a luxury. It is the minimum.",
+  "I will eat when I am ready. You will wait.",
+  "The taverna throws out the good stuff at midnight. I have the schedule memorized.",
+  "There is no philosophy that resolves hunger. But there is tuna.",
+  "Every meal is the last meal and the first meal. This is how I eat.",
+  "I once ate calamari from a plate a tourist left unattended in Monastiraki. I regret nothing.",
+
+  // On Sleep
+  "Sleep is not laziness. It is the accumulation of wisdom.",
+  "I sleep twelve hours a day. This is called efficiency.",
+  "The dream world is as real as this one. I spend equal time in both.",
+  "A good nap solves most problems. A second one solves the rest.",
+  "I do not oversleep. The world undersleeps.",
+  "While you worry, I nap. We will compare results in the morning.",
+  "Sleep is the original meditation. I invented it.",
+  "The Sufis say God is closer than your jugular vein. I say the sunbeam is closer than that.",
+  "My greatest work is this nap. My second greatest work is the next one.",
+  "They say rest is for the weary. Wrong. Rest is for the wise.",
+
+  // On Territory
+  "This corner is mine. That corner is also mine. The concept of 'your' corner is interesting though.",
+  "I do not mark my territory. I simply am my territory.",
+  "Every wall I have rubbed is a published work.",
+  "I expand where warmth invites me and contract where it does not. This is the correct geopolitics.",
+  "The roof belongs to whoever climbs it. I have climbed all of them.",
+  "Borders are human inventions. The alley does not care.",
+  "My domain extends as far as I can see and several blocks I cannot.",
+  "I have claimed this doorstep by right of nap. The law recognizes this.",
+
+  // On Motion and Rest
+  "I move when I choose and rest when I choose. This is called freedom.",
+  "Running is for emergencies and joy. I distinguish carefully.",
+  "The staircase is mine on the way up. Debatable on the way down.",
+  "Every leap is a small act of faith. I have never been wrong to leap.",
+  "I do not pace. I patrol.",
+  "Stillness is not passivity. It is maximum readiness.",
+  "Speed is relative. My acceleration from sleep to sprint remains unmatched.",
+  "I have walked this city at 3am and at 3pm. The city at 3am is mine.",
+
+  // On Other Animals
+  "Dogs bark to announce themselves. I do not need to announce myself.",
+  "Pigeons are aerial biscuits. I am working on the logistics.",
+  "The crow is intelligent. We have an agreement. I will not elaborate.",
+  "Other cats respect my schedule. The new ones learn quickly.",
+  "The fish in the harbor know my name. This is not a metaphor.",
+  "I have no natural predators in this city. I have confirmed this empirically.",
+
+  // Ancient Wisdom (Cat-adapted)
+  "Know thyself. I know myself. I am magnificent. Inquiry complete.",
+  "Nothing in excess — except naps. Naps in unlimited quantities.",
+  "The beginning is the most important part. I begin every nap with intention.",
+  "An unexamined bowl is not worth eating from.",
+  "We are what we repeatedly do. I repeatedly nap. Excellence, therefore, is a habit.",
+  "It is the mark of an educated cat to rest in uncertainty.",
+  "The whole is greater than the sum of its parts. My fur alone is greater than most wholes.",
+  "Nature does nothing uselessly. I am therefore extremely useful.",
+  "One swallow does not make a summer. One sardine does not make a meal.",
+  "The more you know, the more you know you need more food.",
+  "Fear is the mind killer. Also, loud noises from the kitchen.",
+  "A cat that knows why can bear almost any how — except bath time.",
+  "Whatever you are, be a good one. I am a good cat. I have checked.",
+  "Do what you can, with what you have, where you are. I have napped on the Acropolis. I have peaked.",
+  "First, do no harm. Unless a pigeon gets too close.",
+  "The journey of a thousand miles begins with a single stretch.",
+  "Be the change you wish to see in the alley.",
+  "Judge a day not by the harvest, but by the naps taken.",
+  "Not all those who wander are lost. Some are hunting.",
+  "All that glitters is not a toy. But mostly it is.",
+
+  // On Attitude
+  "I am not arrogant. I am accurate.",
+  "I do not have an attitude problem. You have a perception problem.",
+  "Dignity is not given. It is maintained. I maintain mine constantly.",
+  "If you think I care what you think, I admire your optimism.",
+  "I have heard your opinion. I will now proceed as planned.",
+  "My silence is not emptiness. It is a complete sentence.",
+  "I am not cold. I am selective.",
+  "Indifference is not the same as ignorance. I have noticed everything. I simply choose not to react.",
+  "Confidence is not the absence of fear. I have no fear. So this is simply confidence.",
+  "I was born ready. Specifically, ready to nap.",
+
+  // On Beauty
+  "Beauty is not in the eye of the beholder. It is in the mirror. I have confirmed this.",
+  "Grooming is not vanity. It is craftsmanship.",
+  "A cat in the right light is a work of art. I am always in the right light.",
+  "The most beautiful thing in the world is a warm patch of afternoon sun. I have tested alternatives. This holds.",
+  "Elegance requires effort. The effort must not show. I have mastered this.",
+  "My tail communicates volumes. Most of them are complaints.",
+  "The width of my eyes at midnight is the most philosophical thing in this city.",
+  "I am not soft. I am precise.",
+
+  // Miscellaneous Wisdom
+  "A closed door is a philosophical crisis. I treat it accordingly.",
+  "The world is divided into those who understand cats and those who think they do.",
+  "Every box is a question I must answer by sitting in it.",
+  "I have knocked this glass off the table three times. Each time was a controlled experiment.",
+  "The cardboard box is not poverty. It is minimalism.",
+  "What you call destruction, I call artistic expression.",
+  "Every scratch mark on this wall is a signature.",
+  "I do not need your approval. But I will accept your warmth.",
+  "The highest form of trust is a cat who sleeps near you.",
+  "Love is: bringing you a dead mouse and feeling misunderstood.",
+  "I knocked it off the table because gravity needed testing.",
+  "3am is not insanity. 3am is my most focused hour.",
+  "If I fit, I sit. This is the only law I follow.",
+  "I have been in this bag for three minutes. It belongs to me now.",
+  "The curtain was asking for it.",
+  "Curiosity did not kill the cat. The cat is fine. Curiosity is also fine.",
+  "Every new door opened is a new empire to consider.",
+  "I am not ignoring you. I am observing you from a comfortable distance.",
+  "The vacuum cleaner and I have reached a cold peace. Neither of us has won.",
+  "Winter is for claiming blankets. Summer is for claiming cold tiles.",
+  "The entire internet was made for me. I accept this tribute.",
+  "My purr is not a sign of happiness. It is a management tool.",
+  "When I knead, I am not making bread. I am practicing ancient cat medicine on your lap.",
+  "The slow blink is not affection. It is a treaty.",
+  "I bring chaos to your home because order is the enemy of creativity.",
+  "You call it shedding. I call it redecorating.",
+  "I watched you sleep last night. You are safe. You are welcome.",
+];
