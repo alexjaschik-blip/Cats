@@ -37,6 +37,15 @@ function initSchema(db: Database.Database) {
     CREATE TABLE IF NOT EXISTS used_quotes (
       quote TEXT PRIMARY KEY
     );
+
+    -- Star ratings (1–5) per cat
+    CREATE TABLE IF NOT EXISTS cat_ratings (
+      id         INTEGER PRIMARY KEY AUTOINCREMENT,
+      cat_id     INTEGER NOT NULL,
+      stars      INTEGER NOT NULL CHECK(stars BETWEEN 1 AND 5),
+      created_at TEXT DEFAULT (datetime('now'))
+    );
+    CREATE INDEX IF NOT EXISTS idx_cat_ratings_cat_id ON cat_ratings(cat_id);
   `);
 
   // Auto-seed on first boot if table is empty
