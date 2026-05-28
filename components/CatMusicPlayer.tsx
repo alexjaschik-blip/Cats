@@ -2,7 +2,9 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react';
 
-// ─── Real meow sounds (CC BY 4.0 · redjamie7 · freesound.org/packs/40688) ────
+// ─── Real meow sounds ─────────────────────────────────────────────────────────
+// redjamie7: CC BY 4.0 · freesound.org/people/redjamie7/packs/40688
+// lukey1028: free to use · freesound.org/people/lukey1028
 const MEOW_FILES = [
   '/sounds/729021__redjamie7__cat-festus-meow-1.mp3',
   '/sounds/729022__redjamie7__cat-festus-meow-2.mp3',
@@ -13,6 +15,9 @@ const MEOW_FILES = [
   '/sounds/729027__redjamie7__cat-festus-meow-7.mp3',
   '/sounds/729031__redjamie7__cat-smokey-meow-1.mp3',
   '/sounds/729032__redjamie7__cat-smokey-meow-2.mp3',
+  '/sounds/732519__lukey1028__senior-cat-meow.mp3',
+  '/sounds/732520__lukey1028__young-cat-meow.mp3',
+  '/sounds/732521__lukey1028__begging-meow.mp3',
 ];
 
 // Preload at module level so first click is instant
