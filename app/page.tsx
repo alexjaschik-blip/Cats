@@ -156,6 +156,30 @@ export default function Home() {
       {/* Music player */}
       <CatMusicPlayer />
 
+      {/* Credits – CC BY 4.0 attribution required for meow sounds */}
+      <div className="fixed bottom-4 right-4 z-10 pointer-events-none text-right">
+        <p className="text-stone-700 text-[9px] tracking-wide leading-snug">
+          Cat sounds:{' '}
+          <a
+            href="https://freesound.org/people/redjamie7/packs/40688/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline underline-offset-2 hover:text-stone-500 transition-colors pointer-events-auto"
+          >
+            redjamie7 / Freesound
+          </a>
+          {' '}·{' '}
+          <a
+            href="https://creativecommons.org/licenses/by/4.0/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline underline-offset-2 hover:text-stone-500 transition-colors pointer-events-auto"
+          >
+            CC BY 4.0
+          </a>
+        </p>
+      </div>
+
       {/* Loading indicator */}
       {loading && (
         <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-1.5 z-30 pointer-events-none">

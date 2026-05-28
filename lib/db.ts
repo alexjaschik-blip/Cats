@@ -2,8 +2,9 @@ import Database from 'better-sqlite3';
 import path from 'path';
 import { SEED_CATS } from './seed-data';
 
-// On Railway: set DB_PATH=/data/cats.db (persistent volume mounted at /data)
-const DB_PATH = process.env.DB_PATH || path.join(process.cwd(), 'cats.db');
+// On Railway: set DB_PATH=/data/cats.db (persistent volume) for persistence.
+// Falls back to /tmp/cats.db which is always writable on Railway/Linux containers.
+const DB_PATH = process.env.DB_PATH || '/tmp/cats.db';
 
 let _db: Database.Database | null = null;
 
