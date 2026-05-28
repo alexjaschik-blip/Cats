@@ -1,5 +1,6 @@
 import Database from 'better-sqlite3';
 import path from 'path';
+import { SEED_CATS } from './seed-data';
 
 // On Railway: set DB_PATH=/data/cats.db (persistent volume mounted at /data)
 const DB_PATH = process.env.DB_PATH || path.join(process.cwd(), 'cats.db');
@@ -36,6 +37,22 @@ function initSchema(db: Database.Database) {
       quote TEXT PRIMARY KEY
     );
   `);
+
+  // Auto-seed on first boot if table is empty
+  const count = (db.prepare('SELECT COUNT(*) as c FROM cats').get() as { c: number }).c;
+  if (count === 0) {
+    const insert = db.prepare('INSERT INTO cats (image, name, neighborhood, quote) VALUES (?, ?, ?, ?)');
+    const markName  = db.prepare('INSERT OR IGNORE INTO used_names  (name)  VALUES (?)');
+    const markQuote = db.prepare('INSERT OR IGNORE INTO used_quotes (quote) VALUES (?)');
+    db.transaction(() => {
+      for (const cat of SEED_CATS) {
+        insert.run(cat.image, cat.name, cat.neighborhood, cat.quote);
+        markName.run(cat.name);
+        markQuote.run(cat.quote);
+      }
+    })();
+    console.log(`[db] Auto-seeded ${SEED_CATS.length} cats.`);
+  }
 }
 
 /** Mark a name and quote as consumed. Call inside the same transaction as INSERT INTO cats. */
