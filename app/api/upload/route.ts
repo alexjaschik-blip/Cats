@@ -40,7 +40,8 @@ export async function POST(req: NextRequest) {
     // ── Save file ──────────────────────────────────────────────────────────────
     const ext      = file.name.split('.').pop()?.toLowerCase() || 'jpg';
     const filename = `upload_${Date.now()}_${Math.random().toString(36).slice(2)}.${ext}`;
-    const uploadDir = path.join(process.cwd(), 'public', 'cats');
+    // Use UPLOADS_DIR env var (Railway persistent volume) with fallback to public/cats
+    const uploadDir = process.env.UPLOADS_DIR || path.join(process.cwd(), 'public', 'cats');
     await mkdir(uploadDir, { recursive: true });
     await writeFile(path.join(uploadDir, filename), Buffer.from(await file.arrayBuffer()));
 
