@@ -183,23 +183,13 @@ export default function Home() {
       <div className="fixed bottom-4 right-4 z-10 pointer-events-none text-right no-click">
         <p className="text-stone-700 text-[9px] tracking-wide leading-snug">
           Cat sounds:{' '}
-          <a
-            href="https://freesound.org/people/redjamie7/packs/40688/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline underline-offset-2 hover:text-stone-500 transition-colors pointer-events-auto"
-          >
-            redjamie7 / Freesound
-          </a>
+          <a href="https://freesound.org/people/redjamie7/packs/40688/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-stone-500 transition-colors pointer-events-auto">redjamie7</a>
           {' '}·{' '}
-          <a
-            href="https://creativecommons.org/licenses/by/4.0/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline underline-offset-2 hover:text-stone-500 transition-colors pointer-events-auto"
-          >
-            CC BY 4.0
-          </a>
+          <a href="https://freesound.org/people/lukey1028/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-stone-500 transition-colors pointer-events-auto">lukey1028</a>
+          {' '}·{' '}
+          <a href="https://freesound.org/people/timtube/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-stone-500 transition-colors pointer-events-auto">timtube</a>
+          {' '}·{' '}
+          <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-stone-500 transition-colors pointer-events-auto">CC BY 4.0</a>
         </p>
       </div>
 
